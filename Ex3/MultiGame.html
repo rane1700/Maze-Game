@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="no-chash" />
+    <title>Multi-player Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Loader.css">
+</head>
+<body>
+    <div id="nav-placeholder">
+    </div>
+    <div>
+    <img id="jon_snow" src="jon_snow.jpg" hidden="hidden">
+    <img id="throne" src="throne.jpg" hidden="hidden">
+    <img id="jonWinner" src="JonWinner.jpg" hidden="hidden">
+    </div>
+    <div id="loading" class="loader" hidden="hidden"></div>
+        <div class="col-sm-2">
+            <h1>Multiplayer Game</h1>
+            <div class="form-group">
+                <label for="sel1">Games:</label>
+                <select class="form-control" id="gameSelect">
+                </select>
+            </div>
+            <button id="joinBtn" type="button" class="btn btn-default">Join Game</button>
+            <h2>Start New Game</h2>
+            <div class="form-group">
+                <label for="inputdefault">Name</label>
+                <input class="form-control" id="mazeNameBox" type="text">
+            </div>
+            <div class="form-group">
+                <label for="inputdefault">Rows</label>
+                <input class="form-control" id="mazeRowsBox" type="number" min="1">
+            </div>
+            <div class="form-group">
+                <label for="inputdefault">Cols</label> 
+                <input class="form-control" id="mazeColsBox" type="number" min="1">   
+            </div>
+            <button id="startbtn1" type="button" class="btn btn-default">Start Game</button>
+        </div>
+
+    <div class="col-sm-5">
+        <canvas id="myCanvas" style="border:2px black solid" stytabindex="1" class="maze-board"width="500" height="500" ></canvas>
+    </div>
+    <div class="col-sm-5">
+        <canvas id="opponentCanvas" style="border:2px black solid" stytabindex="1" class="maze-board"width =" 500" height="500"></canvas>
+        </div>
+    <script src="/jquery-3.2.1.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="/signalr/hubs"></script>
+        <script src="Scripts/MazePlugin.js"></script>
+    <script src="Scripts/NavigationBar.js"></script>
+    <script src="Scripts/MultiGame.js" type="text/javascript"></script>
+
+</body>
+</html>
